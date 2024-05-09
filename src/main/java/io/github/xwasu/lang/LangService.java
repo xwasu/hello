@@ -1,15 +1,14 @@
 package io.github.xwasu.lang;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
+@Service
 class LangService {
     private LangRepository repository;
-
-    LangService() {
-        this(new LangRepository());
-    }
 
     public LangService(LangRepository repository) {
         this.repository = repository;
