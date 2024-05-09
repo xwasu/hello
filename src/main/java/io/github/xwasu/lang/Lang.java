@@ -1,11 +1,7 @@
 package io.github.xwasu.lang;
 
+import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "languages")
@@ -14,6 +10,7 @@ public class Lang {
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "inc", strategy = "increment")
     private Integer id;
+    @Column(name="welcomemsg")
     private String welcomeMsg;
     private String code;
 
